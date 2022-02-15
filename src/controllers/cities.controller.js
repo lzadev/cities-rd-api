@@ -31,7 +31,7 @@ const getCityById = async (req = request, res = response) => {
       notFound(res, id);
     }
 
-    return res.status(200).json({ data: city });
+    return res.status(200).json({ total: 1, data: city });
   } catch (error) {
     console.log("Error getting all cities", error);
     internalError(res);
